@@ -3,8 +3,9 @@ graph for python which contain the Dijkstra algorithm to calculate the shortest 
 
 git clone https://github.com/huyanmingtoby/pygraph/git
 
-
+```python
 cd ~/pygraph-1.0
 sudo python setup.py install
+```
 
 
