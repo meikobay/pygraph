@@ -6,7 +6,7 @@
 git clone https://github.com/huyanmingtoby/pygraph.git
 
 ```python
-cd ~/pygraph-1.0
+cd ~/pygraph # the root of clone file
 sudo python setup.py install
 ```
 
