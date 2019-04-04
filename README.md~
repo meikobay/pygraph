@@ -3,7 +3,7 @@
 
 
 ## install
-git clone https://github.com/huyanmingtoby/pygraph/git
+git clone https://github.com/huyanmingtoby/pygraph.git
 
 ```python
 cd ~/pygraph-1.0
