@@ -43,6 +43,15 @@ class Graph:
                 self.adjacents[edge.destine][edge.source] = edge.weight
         # print("add edge from {} to {}, weight {}".format(edge.source, edge.destine, edge.weight))
 
+    def delete_edge(self, source, destine):
+        if source not in self.vertices or destine not in self.vertices:
+            return False
+        if destine in self.adjacents[source].keys():
+            self.adjacents[source].pop(destine)            
+            
+        if source in self.adjacents[destine].keys():
+            self.adjacents[destine].pop(source)  
+
     def get_adjacents(self, vertex):
         # print("get the adjacent vertices of vertex {}".format(vertex))
         if vertex not in self.adjacents.keys():
@@ -56,7 +65,7 @@ class Graph:
         for d in self.adjacents.keys():
             print("%d :"% d)
             for b in self.adjacents[d].keys():
-                print self.adjacents[d][b]
+                print(d, b, self.adjacents[d][b])
 
     def find_shortest_path(self, start, end):
         father = np.ones(len(self.vertices), dtype=int)*(-1)
